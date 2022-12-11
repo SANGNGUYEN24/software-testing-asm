@@ -1,0 +1,241 @@
+<html lang="en"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-Siwidth, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Home</title>
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.php">Pizza World</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Top Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="viewPizzaList.php?catid=1">VEG PIZZA</a><a class="dropdown-item" href="viewPizzaList.php?catid=2">NON-VEG PIZZA</a><a class="dropdown-item" href="viewPizzaList.php?catid=3">PIZZA MANIA</a><a class="dropdown-item" href="viewPizzaList.php?catid=4">SIDES ORDERS</a><a class="dropdown-item" href="viewPizzaList.php?catid=5">BEVERAGES</a><a class="dropdown-item" href="viewPizzaList.php?catid=6">CHOICE OF CRUSTS</a><a class="dropdown-item" href="viewPizzaList.php?catid=7">BURGER PIZZA</a><a class="dropdown-item" href="viewPizzaList.php?catid=8">CHOICE OF TOPPINGS</a></div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="viewOrder.php">Your Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+          
+        </ul>
+        <form method="get" action="/OnlinePizzaDelivery/search.php" class="form-inline my-2 my-lg-0 mx-3">
+          <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required="">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form><a href="viewCart.php"><button type="button" class="btn btn-secondary mx-2" title="MyCart">
+          <svg xmlns="img/cart.svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+          </svg>  
+          <i class="bi bi-cart">Cart(0)</i>
+        </button></a>
+          <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#loginModal">Login</button>
+          <button type="button" class="btn btn-success mx-2" data-toggle="modal" data-target="#signupModal">SignUp</button></div>
+    </nav><!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: rgb(111 202 203);">
+            <h5 class="modal-title" id="loginModal">Login Here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="partials/_handleLogin.php" method="post">
+              <div class="text-left my-2">
+                  <b><label for="username">Username</label></b>
+                  <input class="form-control" id="loginusername" name="loginusername" placeholder="Enter Your Username" type="text" required="">
+              </div>
+              <div class="text-left my-2">
+                  <b><label for="password">Password</label></b>
+                  <div class="input-group"><input class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter Your Password" type="password" required="" data-toggle="password"><input type="text" class="form-control" placeholder="Enter Your Password" style="display: none;"><div class="input-group-append" style="cursor: pointer;"><button tabindex="100" title="Click here to show/hide password" class="btn btn-outline-secondary" type="button">
+      <i class="icon-eye-open fa fa-eye">
+      
+      </i></button></div></div>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p class="mb-0 mt-1">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign up now</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Sign up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: rgb(111 202 203);">
+            <h5 class="modal-title" id="signupModal">SignUp Here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="partials/_handleSignup.php" method="post">
+              <div class="form-group">
+                  <b><label for="username">Username</label></b>
+                  <input class="form-control" id="username" name="username" placeholder="Choose a unique Username" type="text" required="" minlength="3" maxlength="11">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <b><label for="firstName">First Name:</label></b>
+                  <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="">
+                </div>
+                <div class="form-group col-md-6">
+                  <b><label for="lastName">Last name:</label></b>
+                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required="">
+                </div>
+              </div>
+              <div class="form-group">
+                  <b><label for="email">Email:</label></b>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required="">
+              </div>
+              <div class="form-group">
+                <b><label for="phone">Phone No:</label></b>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon">+91</span>
+                  </div>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number" required="" pattern="[0-9]{10}" maxlength="10">
+                </div>
+              </div>
+              <div class="text-left my-2">
+                  <b><label for="password">Password:</label></b>
+                  <div class="input-group"><input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required="" data-toggle="password" minlength="4" maxlength="21"><input type="text" class="form-control" placeholder="Enter Password" maxlength="21" style="display: none;"><div class="input-group-append" style="cursor: pointer;"><button tabindex="100" title="Click here to show/hide password" class="btn btn-outline-secondary" type="button">
+      <i class="icon-eye-open fa fa-eye">
+      
+      </i></button></div></div>
+              </div>
+              <div class="text-left my-2">
+                  <b><label for="password1">Renter Password:</label></b>
+                  <div class="input-group"><input class="form-control" id="cpassword" name="cpassword" placeholder="Renter Password" type="password" required="" data-toggle="password" minlength="4" maxlength="21"><input type="text" class="form-control" placeholder="Renter Password" maxlength="21" style="display: none;"><div class="input-group-append" style="cursor: pointer;"><button tabindex="100" title="Click here to show/hide password" class="btn btn-outline-secondary" type="button">
+      <i class="icon-eye-open fa fa-eye">
+      
+      </i></button></div></div>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p class="mb-0 mt-1">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login here</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Warning!</strong> Username Already Exists
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+            </div>
+  
+  <!-- Category container starts here -->
+  <div class="container my-3 mb-5">
+    <div class="col-lg-2 text-center bg-light my-3" style="margin:auto;border-top: 2px groove black;border-bottom: 2px groove black;">     
+      <h2 class="text-center">Menu </h2>
+    </div>
+    <div class="row">
+      <!-- Fetch all the categories and use a loop to iterate through categories -->
+      <div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-1.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=1">VEG PIZZA</a></h5>
+                      <p class="card-text">A delight for veggie lovers! C... </p>
+                      <a href="viewPizzaList.php?catid=1" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-2.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=2">NON-VEG PIZZA</a></h5>
+                      <p class="card-text">Choose your favourite non-veg ... </p>
+                      <a href="viewPizzaList.php?catid=2" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-3.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=3">PIZZA MANIA</a></h5>
+                      <p class="card-text">Indulge into mouth-watering ta... </p>
+                      <a href="viewPizzaList.php?catid=3" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-4.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=4">SIDES ORDERS</a></h5>
+                      <p class="card-text">Complement your pizza with wid... </p>
+                      <a href="viewPizzaList.php?catid=4" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-5.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=5">BEVERAGES</a></h5>
+                      <p class="card-text">Complement your pizza with wid... </p>
+                      <a href="viewPizzaList.php?catid=5" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-6.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=6">CHOICE OF CRUSTS</a></h5>
+                      <p class="card-text">Fresh Pan Pizza Tastiest Pan P... </p>
+                      <a href="viewPizzaList.php?catid=6" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-7.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=7">BURGER PIZZA</a></h5>
+                      <p class="card-text">Domino�s Pizza Introducing all... </p>
+                      <a href="viewPizzaList.php?catid=7" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div><div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="img/card-8.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=8">CHOICE OF TOPPINGS</a></h5>
+                      <p class="card-text">CHOICE OF TOPPINGS... </p>
+                      <a href="viewPizzaList.php?catid=8" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                </div>    </div>
+  </div>
+
+
+    <div class="footer container-fluid bg-dark text-light">
+    <p class="text-center py-2 mb-0">Copyright © 2021 Designed by <a href="https://github.com/darshankparmar" target="_blank" rel="noopener noreferrer">@darshankparmar</a></p>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>         
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+</body></html>
