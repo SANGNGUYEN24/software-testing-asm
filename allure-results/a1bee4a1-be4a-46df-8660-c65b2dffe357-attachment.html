@@ -1,0 +1,629 @@
+<html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head><link href="https://e-learning.hcmut.edu.vn/theme/boost/style/animate.css" rel="stylesheet" media="all">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" id="camera-css" href="https://e-learning.hcmut.edu.vn/theme/boost/style/camera.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://e-learning.hcmut.edu.vn/theme/boost/style/slick.css">
+
+
+
+
+
+    <title>BKEL - HỆ THỐNG HỖ TRỢ GIẢNG DẠY VÀ HỌC TẬP</title>
+    <link rel="shortcut icon" href="https://e-learning.hcmut.edu.vn/theme/image.php/boost/theme/1670401127/favicon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="moodle, BKEL - HỆ THỐNG HỖ TRỢ GIẢNG DẠY VÀ HỌC TẬP">
+<link rel="stylesheet" type="text/css" href="https://e-learning.hcmut.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_17_2_1_1670762367293_8" src="https://e-learning.hcmut.edu.vn/theme/yui_combo.php?m/1670401127/core/event/event-min.js&amp;m/1670401127/filter_mathjaxloader/loader/loader-min.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1670762367293_19" src="https://e-learning.hcmut.edu.vn/theme/yui_combo.php?3.17.2/event-mousewheel/event-mousewheel-min.js&amp;3.17.2/event-resize/event-resize-min.js&amp;3.17.2/event-hover/event-hover-min.js&amp;3.17.2/event-touch/event-touch-min.js&amp;3.17.2/event-move/event-move-min.js&amp;3.17.2/event-flick/event-flick-min.js&amp;3.17.2/event-valuechange/event-valuechange-min.js&amp;3.17.2/event-tap/event-tap-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://e-learning.hcmut.edu.vn/theme/styles.php/boost/1670401127_1/all">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/e-learning.hcmut.edu.vn","homeurl":{},"sesskey":"QwdsEUpn1r","sessiontimeout":"28800","sessiontimeoutwarning":"1200","themerev":"1670401127","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1670401127","admin":"admin","svgicons":true,"usertimezone":"Asia\/Ho_Chi_Minh","courseId":1,"courseContextId":2,"contextid":2,"contextInstanceId":1,"langrev":1670401127,"templaterev":"1670401127"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/e-learning.hcmut.edu.vn\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/e-learning.hcmut.edu.vn\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/e-learning.hcmut.edu.vn\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/e-learning.hcmut.edu.vn\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/e-learning.hcmut.edu.vn\/theme\/yui_combo.php?m\/1670401127\/","combine":true,"comboBase":"https:\/\/e-learning.hcmut.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"m\/1670401127\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/e-learning.hcmut.edu.vn\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/e-learning.hcmut.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1670401127\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/e-learning.hcmut.edu.vn\/lib\/javascript.php\/1670401127\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/e-learning.hcmut.edu.vn\/lib\/javascript.php\/1670401127\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="moodle-validation" content="3cac341b6dbbfcf21c79dc54b52032e6"><meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="https://e-learning.hcmut.edu.vn/lib/requirejs.php/1670401127/core/first.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core_form/events" src="https://e-learning.hcmut.edu.vn/lib/requirejs.php/1670401127/core_form/events.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/jquery/jquery-3.6.0.min.js"></script></head>
+<body id="page-site-index" class="limitedwidth format-site course path-site chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam e-learning-hcmut-edu-vn pagelayout-frontpage course-1 context-2 notloggedin uses-drawers jsenabled">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block frontpage">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/polyfills/polyfill.js"></script>
+<script src="https://e-learning.hcmut.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <div class="header-border"></div>
+    <nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="Site navigation">
+         <div class="container">
+        <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">Side panel</span>
+        </button>
+        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+                <!-- page_heading_menu -->
+                
+         </ul>
+        <a href="https://e-learning.hcmut.edu.vn/" class="navbar-brand d-md-flex align-items-center  p-0 aabtn">
+    
+                <img src="https://e-learning.hcmut.edu.vn/pluginfile.php/1/core_admin/logocompact/300x300/1670401127/logoBK.png" class="logo mr-1" alt="BKEL">
+        </a>
+            <div class="primary-navigation">
+                <nav class="moremenu navigation observed">
+                    <ul id="moremenu-6395cf7d351eb-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link active " href="https://e-learning.hcmut.edu.vn/" aria-current="true">
+                                                Home
+                                            </a>
+                                </li>
+                                <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  " href="https://e-learning-old.hcmut.edu.vn" tabindex="-1">
+                                                Old BKeL
+                                            </a>
+                                </li>
+                                <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a role="menuitem" class="nav-link  " href="https://e-learning.hcmut.edu.vn/course" tabindex="-1">
+                                                Courses
+                                            </a>
+                                </li>
+                        <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                            <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-6395cf7d351eb" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-6395cf7d351eb" role="menu">
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+    
+    
+        <div id="usernavigation" class="navbar-nav ml-auto">
+                <div id="searchinput-navbar-6395cf7d4b8c56395cf7d48c2d3" class="simplesearchform">
+    <div class="collapse" id="searchform-navbar">
+        <form autocomplete="off" action="https://e-learning.hcmut.edu.vn/search/index.php" method="get" accept-charset="utf-8" class="mform form-inline searchform-navbar">
+                <input type="hidden" name="context" value="2">
+            <div class="input-group">
+                <label for="searchinput-6395cf7d4b8c56395cf7d48c2d3">
+                    <span class="sr-only">Search</span>
+                </label>
+                    <input type="text" id="searchinput-6395cf7d4b8c56395cf7d48c2d3" class="form-control withclear" placeholder="Search" aria-label="Search" name="q" data-region="input" autocomplete="off">
+                    <a class="btn btn-close" data-action="closesearch" data-toggle="collapse" href="#searchform-navbar" role="button">
+                        <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only">Close</span>
+                    </a>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-submit" data-action="submit">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only">Search</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <a class="btn btn-open rounded-0 nav-link" data-toggle="collapse" data-action="opensearch" href="#searchform-navbar" role="button" aria-expanded="false" aria-controls="searchform-navbar" title="Toggle search input">
+        <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+        <span class="sr-only">Toggle search input</span>
+    </a>
+</div>
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+                <div class="langmenu">
+                    <div class="dropdown show">
+                        <a href="#" role="button" id="lang-menu-toggle" data-toggle="dropdown" aria-label="Language" aria-haspopup="true" aria-controls="lang-action-menu" class="btn dropdown-toggle">
+                            <i class="icon fa fa-language fa-fw mr-1" aria-hidden="true"></i>
+                            <span class="langbutton">
+                                English ‎(en)‎
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <div role="menu" aria-labelledby="lang-menu-toggle" id="lang-action-menu" class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item pl-5" role="menuitem" aria-current="true">
+                                        English ‎(en)‎
+                                    </a>
+                                    <a href="https://e-learning.hcmut.edu.vn/?lang=vi" class="dropdown-item pl-5" role="menuitem" lang="vi">
+                                        Vietnamese ‎(vi)‎
+                                    </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    <div class="usermenu">
+                            <span class="login pl-2">
+                                    <a href="https://e-learning.hcmut.edu.vn/login/index.php">Log in</a>
+                            </span>
+                    </div>
+            </div>
+            
+        </div>
+        </div>
+    </nav>
+    
+
+<div class="drawer drawer-left drawer-primary d-print-none" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1" aria-hidden="true">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-primary" data-toggle="tooltip" data-placement="right" title="Close drawer" data-aria-hidden-tab-index="" tabindex="-1">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://e-learning.hcmut.edu.vn/" class="list-group-item list-group-item-action active " aria-current="true" data-aria-hidden-tab-index="" tabindex="-1">
+                    Home
+                </a>
+                <a href="https://e-learning-old.hcmut.edu.vn" class="list-group-item list-group-item-action  " data-aria-hidden-tab-index="" tabindex="-1">
+                    Old BKeL
+                </a>
+                <a href="https://e-learning.hcmut.edu.vn/course" class="list-group-item list-group-item-action  " data-aria-hidden-tab-index="" tabindex="-1">
+                    Courses
+                </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <div class="homepage-carousel">
+        <div id="homepage-carousel" class="camera_magenta_skin bs-slider camera_wrap" style="display: block; margin-bottom: 0px; height: 650px;"><div class="camera_fakehover"><div class="camera_src camerastarted hovered">
+            <div class="carousel-item" data-src="https://e-learning.hcmut.edu.vn/theme/boost/images/slbktv.jpg" data-link="http://e-learning.hcmut.edu.vn">
+                
+            </div>
+            <div class="carousel-item" data-src="https://e-learning.hcmut.edu.vn/theme/boost/images/slbk.jpg" data-link="http://e-learning.hcmut.edu.vn">
+        <div class="slide-text animated fadeIn content-center " style="width: 100%; visibility: hidden;">
+            <h1 class="" data-animation="animated ScrollRight">HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY</h1>
+            <p class="" data-animation="animated ScrollRight">BACH KHOA E-LEARNING</p>
+        </div>
+    </div>
+
+    </div><div class="camera_target"><div class="cameraCont"><div class="cameraSlide cameraSlide_0 cameracurrent" style="visibility: visible; z-index: 999;"><img src="https://e-learning.hcmut.edu.vn/theme/boost/images/slbktv.jpg?1670762367447" class="imgLoaded" style="visibility: visible; height: 650px; margin-left: -38.4px; margin-right: -38.4px; margin-top: 0px; position: absolute; width: 1600px;" data-alignment="" data-portrait="" width="1600" height="650"><div class="camerarelative" style="width: 1523.2px; height: 650px;"></div></div><div class="cameraSlide cameraSlide_1 cameranext" style="display: none;"><img src="https://e-learning.hcmut.edu.vn/theme/boost/images/slbk.jpg?1670762368295" class="imgLoaded" data-alignment="" data-portrait="" width="1600" height="650" style="visibility: visible; height: 650px; margin-left: -38.4px; margin-right: -38.4px; margin-top: 0px; position: absolute; width: 1600px;"><div class="camerarelative" style="width: 1523.2px; height: 650px;"></div></div><div class="cameraSlide cameraSlide_2" style="z-index: 1; display: none;"><div class="camerarelative" style="width: 1523.2px; height: 650px;"></div></div></div></div><div class="camera_target_content"><div class="cameraContents"><div class="cameraContent cameracurrent" style="display: block;"><a class="camera_link" href="http://e-learning.hcmut.edu.vn" target=""></a><div class="slide-text animated fadeIn content-center " style="width: 100%; visibility: visible; opacity: 1;">
+                    <h1 class="" data-animation="animated ScrollRight">HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY</h1>
+                    <p class="" data-animation="animated ScrollRight">BACH KHOA E-LEARNING</p>
+                </div></div><div class="cameraContent"><a class="camera_link" href="http://e-learning.hcmut.edu.vn" target=""></a></div></div></div><div class="camera_bar" style="bottom: auto; height: 7px;"><span class="camera_bar_cont" style="opacity: 0.7; position: absolute; inset: 0px; background-color: rgb(34, 34, 34);"><span id="pie_0" style="opacity: 0.7; position: absolute; background-color: rgb(238, 238, 238); inset: 2px 1523.2px 2px 0px;"></span></span></div><div class="camera_commands" style="opacity: 1;"><div class="camera_play" style="display: none;"></div><div class="camera_stop" style=""></div></div><div class="camera_prev" style="opacity: 1;"><span></span></div><div class="camera_next" style="opacity: 1;"><span></span></div></div><div class="camera_pag"><ul class="camera_pag_ul"><li class="pag_nav_0 cameracurrent" style="position:relative; z-index:1002"><span><span>0</span></span></li><li class="pag_nav_1" style="position:relative; z-index:1002"><span><span>1</span></span></li></ul></div><div class="camera_loader" style="display: none;"></div></div>
+    </div>
+    <script type="text/javascript" id="camerajs">
+    (function($) {
+        var interval = "4000";
+        var autoplay = true;
+        var slideHeight = 650;
+        var thumbnails = true;
+        var pagination = 'DOTED';
+        var imagePath = '';
+        var navigation = true;
+
+
+
+        $(document).ready(function(){
+
+            var h = $(window).height();
+            var wi = $(window).width();
+       //     var val = ( parseInt(slideHeight) / parseInt(wi) ) * parseInt(100);
+            if(wi > 1600)
+            {
+                heightval = '800px';
+            }
+            else if(wi > 991){
+                var val = ( parseInt(slideHeight) / parseInt(wi) ) * parseInt(100);
+                heightval = val +'%';
+            }
+            else{
+                if(h < 400){
+                    cc = h - 77;
+                    heightval = cc+'px';
+                }
+                else{
+                    heightval = '50%';
+                }
+
+            }
+            $('#homepage-carousel').camera({
+                height: heightval,
+                pagination: true,
+                thumbnails: false,
+                time: interval,
+                loaderColor: '#eeeeee',
+                loaderBgColor: '#222222', //'#222222',
+
+                loader: 'bar',
+                autoAdvance: true,
+                navigation: navigation,
+                mobileAutoAdvance: true,
+                mobileNavHover: false,
+                imagePath: imagePath,
+                overlayer: false,
+                loaderOpacity:0.7,
+                rows: 4,
+                slicedCols: 7,
+                slicedRows: 5,
+                transPeriod: 1000,
+                barPosition: 'top',
+                easing: 'easeInOutExpo',
+                onEndTransition: function() {
+                    $this = $('.camera_target_content .cameracurrent');
+                    animation();
+                    $('.slide-text').show();
+                },
+            });
+            $("#homepage-carousel").cameraPause();
+            $(window).on("load", function(){
+                if (autoplay == true) {
+                    $("#homepage-carousel").cameraResume();
+                }
+                if ($("#homepage-carousel").width() <= 800) {
+                    $("#homepage-carousel").cameraResume();
+                }
+            });
+
+            function animation() {
+                $this = $('.camera_target_content .cameracurrent')
+                $content = $this.find('.heading-content [data-animation ^= "animated"]');
+                index = 0;
+                if ($content != "undefined" && $content.length != ""){
+                    $content.css({'opacity': 0});
+                    $time = setInterval(function () {
+                        $this = $content;
+                        da = $content.eq(index);
+                        ani = da.attr('data-animation');
+                        da.addClass(ani);
+                        da.css({'opacity': 1});
+                        index++;
+                        if (index == $this.length) {
+                            clearInterval($time);
+                        }
+                        doAnimations(da);
+                    }, 400);
+
+                }
+            }
+
+            function doAnimations(elems) {
+                var animEndEv = 'webkitAnimationEnd animationend';
+                elems.each(function () {
+                    var $this = $(this),
+                            $animationType = $this.data('animation');
+                    $this.addClass($animationType).one(animEndEv, function () {
+                        $this.removeClass($animationType);
+                    });
+                });
+            }
+        });
+    })(jQuery);
+</script>
+
+
+    <!--About Us-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            if ( $('body').hasClass('dir-rtl') ) {
+                rtl = true;
+            } else {
+                rtl = false;
+            }
+
+            $(".course-slider").slick({
+                arrows:true ,
+                swipe:true,
+                /*prevArrow:'#available-courses .pagenav .slick-prev',
+                nextArrow: '#available-courses .pagenav .slick-next',*/
+                rtl:rtl,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                responsive: [
+                    {
+                        breakpoint: 991 ,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ],
+
+            });
+            var prow = $(".course-slider").attr("data-crow");
+            prow = parseInt(prow);
+            if (prow < 2) {
+                $("#available-courses .pagenav").hide();
+            }
+        })
+
+    </script>
+<div id="frontpage-available-course-list" class="frontpage-available-course frontpageblock-theme">
+<div class="bgtrans-overlay"><div></div></div><div class="available-courses" id="available-courses"><div class="available-overlay"><div class="available-block"><div class="container"><div class="row"><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=2"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/14/course/overviewfiles/h1.jpg" alt="THÔNG TIN HỖ TRỢ BKEL"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=2">THÔNG TIN HỖ TRỢ BKEL</a></h6><div class="text-content"><div>Quý Thầy/Cô thắc mắc về việc sử dụng BKeL xin vui lòng liên hệ Tổ kỹ thuật P.ĐT.</div><div>Email: phuongbkdt@hcmut.edu.vn hoặc ĐT: 0939301186 (A.Nguyễn Thanh Phương) hoặc ĐT: 5258 (A.Dương Điền Thu)</div>
+<div>Quý Thầy/Cô chưa có tài khoản (hoặc quên mật khẩu) nhà trường vui lòng liên hệ Ban quản lý mạng toà nhà A5 để được hỗ trợ.</div><div>Email: support@hcmut.edu.vn hoặc ĐT: (84-8) 38647256 - 5200</div></div></div></div><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=7"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/79/course/overviewfiles/h6.jpg" alt="THÔNG BÁO TUYỂN SINH ĐÀO TẠO SONG NGÀNH"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=7">THÔNG BÁO TUYỂN SINH ĐÀO TẠO SONG NGÀNH</a></h6><div class="text-content"><p dir="ltr" style="text-align: left;"></p><p dir="ltr"><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Nhằm tạo điều kiện cho sinh viên các Trường thành viên ĐHQG-HCM mở rộng cơ hội học tập, phát triển năng lực cá nhân và cơ hội nghề nghiệp trong tương lai;</span><br></p><strong></strong><br><p></p></div></div></div><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=6"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/77/course/overviewfiles/h5.jpg" alt="THÔNG TIN KHẢO SÁT Ý KIẾN SINH VIÊN VỀ MÔN HỌC"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=6">THÔNG TIN KHẢO SÁT Ý KIẾN SINH VIÊN VỀ MÔN HỌC</a></h6><div class="text-content">Cập nhật thông báo, thông tin, hướng dẫn khảo sát môn học.<p dir="ltr" style="text-align: left;">
+</p></div></div></div><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=5"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/75/course/overviewfiles/h4.jpg" alt="HƯỚNG DẪN SỬ DỤNG DÀNH CHO GIẢNG VIÊN"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=5">HƯỚNG DẪN SỬ DỤNG DÀNH CHO GIẢNG VIÊN</a></h6><div class="text-content"><p dir="ltr" style="text-align: left;">Cập nhật tất cả các tài liệu, video hướng dẫn sử dụng hệ thống. Bao gồm quản lý khóa học, tài nguyên,hoạt động, quản lý danh sách lớp, gửi tin nhắn cho tất cả các thành viên trong khóa học, hướng dẫn tạo bài kiểm tra, bài tập lớn</p></div></div></div><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=78488"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/228557/course/overviewfiles/h3.jpg" alt="SINH HOẠT CÔNG DÂN CUỐI KHÓA NĂM HỌC 2022 - 2023"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=78488">SINH HOẠT CÔNG DÂN CUỐI KHÓA NĂM HỌC 2022 - 2023</a></h6><div class="text-content"></div></div></div><div class="col-md-6 col-sm-6 col-lg-4"><div class="available-content"><div class="cborder"><div class="mask2"></div><div class="mask3"></div></div><div class="available-img"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=3"><img src="https://e-learning.hcmut.edu.vn/pluginfile.php/71/course/overviewfiles/tt.jpg" alt="THÔNG BÁO CÀI ĐẶT ỨNG DỤNG MOODLE TRÊN MOBILE"></a></div><h6 class="title-text"><a href="https://e-learning.hcmut.edu.vn/course/view.php?id=3">THÔNG BÁO CÀI ĐẶT ỨNG DỤNG MOODLE TRÊN MOBILE</a></h6><div class="text-content"><p dir="ltr" style="text-align: left;">Để thuận tiện trong việc&nbsp;<strong>theo dõi thông báo, tin nhắn</strong>&nbsp;trên BKeL cán bộ và sinh viên hãy cài đặt ứng dụng Moodle trên điện thoại di động theo hướng dẫn<br></p></div></div></div></div></div></div></div></div>
+</div>    <div id="page" style="display:none" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="d-flex align-items-center">
+                <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-headings"><h1 class="h2">BKEL - HỆ THỐNG HỖ TRỢ GIẢNG DẠY VÀ HỌC TẬP</h1></div></div>
+                </div>
+        <div class="header-actions-container ml-auto" data-region="header-actions-container">
+        </div>
+    </div>
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div class="ml-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+
+    </div>
+</header>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <section id="region-main" aria-label="Content">
+
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span><br></div>
+                        
+                        
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<footer id="site-footer">
+    <div class="footer-main">
+        <div class="bgtrans-overlay"></div><!--Overlay transparent bg layer-->
+        <div class="container footer-main-wrap">
+            <div class="row 1">
+                <div class="col-md-4">
+                    <h6>BÁCH KHOA E-LEARNING</h6>
+                    <div class="footer-links">
+                        <img src="/theme/boost/pix/logo.png" style="width:100px">
+
+
+                    </div>
+                </div>
+
+
+                    <div class="col-md-4">
+                        <h6>WEBSITE</h6>
+                        <div class="footer-links">
+                            <ul>
+
+<li><a href="http://hcmut.edu.vn/">HCMUT</a></li>
+<li><a href="https://mybk.hcmut.edu.vn/">MyBK</a></li>
+<li><a href="http://mybk.hcmut.edu.vn/bksi/">BKSI</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h6> CONTACT </h6>
+                        <div class="footer-address-block"><div class="footer-address">
+                            <p><i class="fa fa-map-marker"></i> 268 Ly Thuong Kiet Street Ward 14, District 10, Ho Chi Minh City, Vietnam</p></div>
+                            <div class="footer-phone"><p><i class="fa fa-phone-square"></i>(028) 38 651 670 - (028) 38 647 256 (Ext: 5258, 5234)</p></div>
+                            <div class="footer-email"><p><i class="fa fa-envelope"></i><a href="mailto:elearning@hcmut.edu.vn">elearning@hcmut.edu.vn</a></p></div></div>
+                        <div class="social-media footer-small-socials">
+                            <ul>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+<div style="display:none">192</div>
+        <div class="container">
+        <p>Copyright 2007-2022 BKEL - Power by Moodle</p>
+            
+            <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://e-learning.hcmut.edu.vn/lib/requirejs.php/1670401127/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/jquery/jquery-3.6.0.min',
+        jqueryui: 'https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/jquery/ui-1.13.0/jquery-ui.min',
+        jqueryprivate: 'https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://e-learning.hcmut.edu.vn/lib/javascript.php/1670401127/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6395cf7d351eb-navbar-nav'));
+    });
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    var uniqid = "6395cf7d4aca86395cf7d48c2d2";
+    var container = $('#searchinput-navbar-' + uniqid);
+    var opensearch = container.find('[data-action="opensearch"]');
+    var input = container.find('[data-region="input"]');
+    var submit = container.find('[data-action="submit"]');
+
+    submit.on('click', function(e) {
+        if (input.val() === '') {
+            e.preventDefault();
+        }
+    });
+    container.on('hidden.bs.collapse', function() {
+        opensearch.removeClass('d-none');
+        input.val('');
+    });
+    container.on('show.bs.collapse', function() {
+        opensearch.addClass('d-none');
+    });
+    container.on('shown.bs.collapse', function() {
+        input.focus();
+    });
+});
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    var uniqid = "6395cf7d4b8c56395cf7d48c2d3";
+    var container = $('#searchinput-navbar-' + uniqid);
+    var opensearch = container.find('[data-action="opensearch"]');
+    var input = container.find('[data-region="input"]');
+    var submit = container.find('[data-action="submit"]');
+
+    submit.on('click', function(e) {
+        if (input.val() === '') {
+            e.preventDefault();
+        }
+    });
+    container.on('hidden.bs.collapse', function() {
+        opensearch.removeClass('d-none');
+        input.val('');
+    });
+    container.on('show.bs.collapse', function() {
+        opensearch.addClass('d-none');
+    });
+    container.on('shown.bs.collapse', function() {
+        input.focus();
+    });
+});
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+require(['theme_boost/drawers']);
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://e-learning.hcmut.edu.vn/theme/boost/javascript/jquery.easing.1.3.js"></script>
+<script src="https://e-learning.hcmut.edu.vn/theme/boost/javascript/camera.min.js"></script>
+<script src="https://e-learning.hcmut.edu.vn/theme/boost/javascript/slick.js"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6395cf7d48c2d4'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6395cf7d48c2d4'); });
+})();
+//]]>
+</script>
+
+      </div>
+    </div>
+
+</footer>
+
+
+    
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+
+</body></html>
