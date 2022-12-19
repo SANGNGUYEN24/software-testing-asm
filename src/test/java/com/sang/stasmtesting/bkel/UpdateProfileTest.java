@@ -59,7 +59,7 @@ public class UpdateProfileTest {
     }
 
     @AfterEach
-    public void closeWeb(){
+    public void closeWeb() {
         webdriver().driver().close();
     }
 
@@ -73,13 +73,13 @@ public class UpdateProfileTest {
         submitBtn.click();
     }
 
-    private void gotoEditPage(){
+    private void gotoEditPage() {
         profileBtn.click();
         profileBar.click();
         editProfileTitle.click();
     }
 
-    private void uploadProfilePicture(){
+    private void uploadProfilePicture() {
         SelenideElement chooseFileBtn = $("[id='yui_3_17_2_1_1671455394248_1874']");
         chooseFileBtn.sendKeys("/assets/avatar.jpg");
 
@@ -87,7 +87,7 @@ public class UpdateProfileTest {
         uploadChosenFileBtn.click();
     }
 
-    private void clickUpdateProfileBtn(){
+    private void clickUpdateProfileBtn() {
         SelenideElement updateProfileBtn = $("[id='id_submitbutton']");
         updateProfileBtn.click();
 
@@ -98,7 +98,7 @@ public class UpdateProfileTest {
 
     // CP-009
     @Test
-    public void updateAvatarWithoutDeleteOld_success(){
+    public void updateAvatarWithoutDeleteOld_success() {
         gotoEditPage();
         addFileBtn.click();
         uploadProfilePicture();
@@ -107,7 +107,7 @@ public class UpdateProfileTest {
 
     // CP-010
     @Test
-    public void deleteTheOldPicture_success(){
+    public void deleteTheOldPicture_success() {
         gotoEditPage();
 
         SelenideElement deleteCheckbox = $("[for='id_deletepicture']");
@@ -116,29 +116,53 @@ public class UpdateProfileTest {
         clickUpdateProfileBtn();
     }
 
+    // CP-011
     @Test
-    public void doNothing_noError(){
+    public void doNothing_noError() {
         gotoEditPage();
         clickUpdateProfileBtn();
     }
 
-    // CP-011
+    // CP-012
     @Test
     public void updateProfileAndDescription_success() {
         gotoEditPage();
-
-        SelenideElement chooseFileBtn = $("[id='yui_3_17_2_1_1671455394248_1874']");
-        chooseFileBtn.sendKeys("/assets/avatar.jpg");
-
-        SelenideElement uploadChosenFileBtn = $("[class='uploadChosenFileBtn']");
-        uploadChosenFileBtn.click();
-
-        SelenideElement description = $("[id='id_description_editoreditable']");
-        description.sendKeys("Toi la sinh vien Bach Khoa");
-
+        uploadProfilePicture();
+        addDescription();
         clickUpdateProfileBtn();
     }
 
-    //CP-012
+    private void addDescription() {
+        SelenideElement description = $("[id='id_description_editoreditable']");
+        description.sendKeys("Toi la sinh vien Bach Khoa");
+    }
 
+    //CP-013
+    @Test
+    public void reUploadProfilePictureAndAddDesc_success() {
+        gotoEditPage();
+        uploadProfilePicture();
+        uploadProfilePicture();
+        addDescription();
+        clickUpdateProfileBtn();
+    }
+
+    // CP-013
+    @Test
+    public void reUploadProfilePictureAndAddDesc_dontClickUpdateBtn_noError() {
+        gotoEditPage();
+        uploadProfilePicture();
+        uploadProfilePicture();
+        addDescription();
+    }
+
+    // CP-014
+    @Test
+    public void dontSaveEditAndLogout_noError(){
+        gotoEditPage();
+        SelenideElement userBtn = $("[href='https://e-learning.hcmut.edu.vn/pluginfile.php/18247/user/icon/boost/f2?rev=1906157']");
+        userBtn.click();
+        SelenideElement signOutBtn = $("[id='yui_3_17_2_1_1671461953113_1306']");
+        signOutBtn.click();
+    }
 }
