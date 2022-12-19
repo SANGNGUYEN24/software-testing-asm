@@ -132,6 +132,40 @@ public class UpdateProfileTest {
         clickUpdateProfileBtn();
     }
 
+    //CP-014
+    @Test
+    public void uploadTwoImagesandDescription() {
+        gotoEditPage();
+
+        SelenideElement chooseFileBtn = $("[id='yui_3_17_2_1_1671455394248_1874']");
+        chooseFileBtn.sendKeys("/assets/avatar.jpg");
+
+        SelenideElement uploadChosenFileBtn = $("[class='uploadChosenFileBtn']");
+        uploadChosenFileBtn.click();
+
+        SelenideElement chooseFileBtn1 = $("[id='yui_3_17_2_1_1671455394248_1874']");
+        chooseFileBtn.sendKeys("/assets/avatar.jpg");
+
+        SelenideElement uploadChosenFileBtn1 = $("[class='uploadChosenFileBtn']");
+        uploadChosenFileBtn.click();
+
+        SelenideElement description = $("[id='id_description_editoreditable']");
+        description.sendKeys("Toi la sinh vien Bach Khoa");
+
+        clickUpdateProfileBtn();
+    }
+
+    // User does nothing and click the update profile button.
+    @Test
+    public void doNothingandUpdateProfile() {
+        gotoEditPage();
+
+        clickUpdateProfileBtn();
+    }
+    //CP-015
+    @Test
+    public void onlyViewProfilePage() {
+        gotoEditPage();
     private void addDescription() {
         SelenideElement description = $("[id='id_description_editoreditable']");
         description.sendKeys("Toi la sinh vien Bach Khoa");
