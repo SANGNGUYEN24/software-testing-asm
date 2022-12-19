@@ -9,7 +9,8 @@
     Ex:
   
     <img width="500" alt="image" src="https://user-images.githubusercontent.com/78266241/208471673-d63dfea6-05f2-422f-8ace-b1ce4b68f4e0.png">
-
-
+    
+    Go to [SearchCourseTest Demo](https://drive.google.com/file/d/19KgSQzr9qGxDaxqild48eDmHCvRUcfyH/view?usp=sharing) to see the automation test output for `SearchCourseTest.java`
+    
 
 
